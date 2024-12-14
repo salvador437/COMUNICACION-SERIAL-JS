@@ -9,7 +9,7 @@ const port = new SerialPort({
 
 port.open(function (err) {
   if (err) {
-    return console.log('Error abriendo puerto: ', err.message)
+    return console.error('Error abriendo puerto: ', err.message)
     port.close(console.log("puerto cerrado"))
   }
   
