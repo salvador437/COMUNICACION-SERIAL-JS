@@ -15,9 +15,13 @@ port.open(function (err) {
   
 })
 
+
+
 const parser = new ReadlineParser()
 port.pipe(parser)
-parser.on('data', console.log)
+parser.on('data',  (line) => {
+  console.log(line)
+})
 
 
 
